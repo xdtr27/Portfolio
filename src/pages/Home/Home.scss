@@ -1,0 +1,171 @@
+.Home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14rem;
+  margin-bottom: 14rem;
+
+  .centralTitle {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    .title {
+      display: flex;
+      justify-content: center;
+
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        color: #000;
+      }
+      span {
+        font-size: 500px;
+        color: red !important;
+      }
+
+      p {
+        padding-left: 5rem;
+      }
+    }
+  
+    .technologies {
+      // display: flex;
+      // justify-content: center;
+      // gap: .5rem;
+
+      // span {
+      //   font-size: 2rem;
+      //   color: #8253D3;
+      // }
+    }
+
+  }
+}
+
+////////////////////////////
+
+////// ANIMAÇÃO do BAckground
+
+.animate {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 100%;
+  filter: blur(40px);
+
+  z-index: -1;
+  opacity: 0.2;
+}
+
+@keyframes one {
+  0% {
+    left: 40%;
+    top: 10%;
+  }
+  25% {
+    left: 20%;
+    top: 40%;
+  }
+  50% {
+    left: 50%;
+    top: 50%;
+  }
+  75% {
+    left: 20%;
+    top: 60%;
+  }
+  100% {
+    left: 40%;
+    top: 10%;
+  }
+}
+
+@keyframes two {
+  0% {
+    left: 60%;
+    top: 15%;
+  }
+  25% {
+    left: 50%;
+    top: 20%;
+  }
+  50% {
+    left: 20%;
+    top: 25%;
+  }
+  75% {
+    left: 50%;
+    top: 20%;
+  }
+  100% {
+    left: 60%;
+    top: 15%;
+  }
+}
+
+@keyframes three {
+  0% {
+    left: 20%;
+    top: 30%;
+  }
+  25% {
+    left: 40%;
+    top: 35%;
+  }
+  50% {
+    left: 60%;
+    top: 40%;
+  }
+  75% {
+    left: 40%;
+    top: 35%;
+  }
+  100% {
+    left: 20%;
+    top: 30%;
+  }
+}
+
+.bg-one {
+  background-color: blue;
+  animation: one 10s infinite;
+}
+
+.bg-two {
+  background-color: rgb(0, 145, 255);
+  animation: two 10s infinite;
+}
+.bg-three {
+  background-color: rgb(15, 189, 183);
+  animation: three 10s infinite;
+}
+
+@media (max-width: 865px) {
+  .centralTitle {
+    max-width: 500px;
+    width: 100%;
+    .title {
+      h1 {
+        font-size: 0.5rem;
+      }
+      h3 {
+        font-size: 0.2rem;
+      }
+      p {
+        .typed {
+          color: red;
+        }
+      }
+    }
+  }
+
+  .animate {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+

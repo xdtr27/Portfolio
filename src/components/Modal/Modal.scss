@@ -1,0 +1,116 @@
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  min-width: 100px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+
+  &.show-modal {
+    visibility: visible;
+    opacity: 1;
+  }
+  .modal-box {
+    width: 70%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    align-self: center;
+    position: relative;
+
+    padding: 2rem;
+
+    display: flex;
+
+    gap: 2rem;
+
+    .modal-one {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      width: 50%;
+
+      h2 {
+        height: 200px;
+        width: 100%;
+        border: 2px solid rgb(201, 201, 201);
+        border-radius: 5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 1rem;
+
+        .button {
+          padding: 0.25rem 0.5rem;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+
+          cursor: pointer;
+
+          background-color: rgb(108, 69, 176);
+          color: white;
+          font-weight: 500;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            filter: brightness(1.2);
+          }
+        }
+      }
+    }
+
+    .modal-two {
+      width: 50%;
+    }
+
+    .iconClose {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 25px;
+      color: gray;
+
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: rgb(87, 87, 87);
+      }
+    }
+  }
+}
+
+@media (max-width: 865px) {
+  .modal {
+    .modal-box {
+      flex-direction: column;
+      padding: 3rem 1rem ;
+
+      .modal-one {
+        width: 100%;
+      }
+
+      .modal-two {
+        width: 100%;
+      }
+
+      .iconClose {
+        top: 5px;
+        right: 5px;
+      }
+    }
+  }
+}

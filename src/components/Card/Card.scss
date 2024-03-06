@@ -1,0 +1,114 @@
+.projectCard {
+  // display: flex;
+  width: calc(25% - 24px);
+  min-width: 300px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    img {
+      filter: brightness(1);
+    }
+    figure:after {
+      border-radius: 0;
+    }
+    figcaption {
+      display: none;
+    }
+    .more {
+      transform: translateY(0);
+    }
+  }
+
+  figure {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(100%);
+      border-radius: 0 0 5px 5px;
+      height: 4px;
+      background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(136, 0, 255, 1) 0%,
+        rgba(72, 0, 255, 1) 100%
+      );
+      bottom: 6px;
+      right: 0;
+    }
+
+    img {
+      width: 100%;
+      max-height: 250px;
+      border-radius: 5px;
+      filter: brightness(0.3);
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+
+    figcaption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      filter: none !important;
+      transition: all 0.3s ease-in-out;
+
+      strong {
+        font-weight: 600;
+      }
+
+      .techs {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        font-size: 17px;
+        color: #d1beff;
+      }
+    }
+  }
+  .more {
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+    background-color: #202020;
+    width: 100%;
+    bottom: -36px;
+    border-radius: 0 0 5px 5px;
+    color: white;
+    position: absolute;
+    z-index: -1;
+
+    transform: translateY(-42px);
+
+    span {
+      font-size: 0.7rem;
+      color: #acacac;
+    }
+
+    button {
+      font-size: 0.7rem;
+      outline: none;
+      border: none;
+      padding: 2px 4px;
+      border-radius: 3px;
+      background-color: #8253d3;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+      transition: filter 0.2s ease-in-out;
+      
+
+      &:hover {
+        background-color: #6a43ae;
+      }
+    }
+  }
+}

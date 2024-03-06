@@ -1,0 +1,59 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+ 
+  padding-bottom: 5rem;
+
+  
+
+  h2 {
+    align-self: center;
+    font-weight: 600;
+    margin-bottom: 2rem;
+
+    span {
+      color: #8253d3;
+      font-size: 2rem;
+    }
+  }
+
+  h3 {
+    font-weight: 600;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+
+    &::after {
+      content: "";
+      height: 4px;
+      width: 30px;
+      background-color: #8253d3;
+      position: absolute;
+      bottom: 0;
+      left: 70%;
+    }
+  }
+  .destaques {
+    display: flex;
+    flex-direction: column;
+    
+    .cards {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 2rem;
+       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 865px) {
+  .projects {
+    .destaques {
+      align-items: center;
+      .cards {
+        justify-content: center;
+      }
+    }
+  }
+}
